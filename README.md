@@ -1,2 +1,2 @@
 # ALX-T
- For all ALX projects g
+ For all ALX projects.
