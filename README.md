@@ -1,5 +1,4 @@
-# ALX-T
- For all ALX projects.
+
 
 ### Started my first course on ALX "Introduction to Data Analysis" - 21st of July 2022.
 
