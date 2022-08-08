@@ -5,3 +5,4 @@
 
 ### Started my first ALX project - 22nd of July 2022.
 Project is on the analysis of gun data from the FBI NICS Firearm Background Check Data) , collated with the US census Data.
+### Completed my first ALX project - 8th of August 2022.
