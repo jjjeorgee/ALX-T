@@ -1,6 +1,5 @@
 ## This Repository is for all ALX projects and exercises.
-![Screenshot 2022-08-02 205947](https://user-images.githubusercontent.com/98137996/182647511-c2254f4a-21c4-45c2-8e92-f907644684b7.png)
-
+![alx-newlogo](https://user-images.githubusercontent.com/98137996/187809069-06924969-2ad8-4bb2-b396-8c9159284ac1.png)
 ### Got accepted into the ALX Data Analysis Nanodegree Program - 20th of July 2022
 
 ### Started my first course on ALX "Introduction to Data Analysis" - 21st of July 2022.
