@@ -99,7 +99,7 @@
 
         
         
-            <link rel="preload" href="/assets/pizza-pie/stylesheets/bundles/auth.cd937941daa.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <link rel="preload" href="/assets/pizza-pie/stylesheets/bundles/auth.18554c99513.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         
 
         <script>
@@ -244,31 +244,45 @@
             <span class="cognito-signup-form__option__text">Continue with Google</span>
         </div>
     </rt-button>
-    <rt-panel slot="error" id="error-panel" tabindex="0" type="error" hidden data-qa="auth-signup-screen-error">
-        Please correct the error. Enter a valid email address
-    </rt-panel>
-    <tool-tip
-        class="cognito-signup-form__tooltip"
-        title="Where is the password field?"
-        description="Rotten Tomatoes now offers passwordless authentication for all user accounts, making it easier for you to access your information. Simply enter the email address you previously used and hit continue to complete your log-in."
-        slot="tooltip"
-        nomobilefooter
-    >
-        <button slot="tool-tip-btn" class="button--link">
-            <rt-icon icon="question-circled" image></rt-icon>
-        </button>
-    </tool-tip>
+    <rt-button slot="signup-option" theme="light" class="cognito-signup-form__option" value="email" data-qa="auth-signup-screen-email-btn">
+        <div class="cognito-signup-form__option__container">
+            <rt-icon image icon="mail" class="cognito-signup-form__option__icon cognito-signup-form__option__icon--mail"></rt-icon>
+            <span class="cognito-signup-form__option__text">Continue with Email</span>
+        </div>
+    </rt-button>
+        
     <input-label slot="email">
         <label slot="label" for="cognito-email-input" class="auth-form__control__label">Email</label>
         <input slot="input" id="cognito-email-input" type="email" data-qa="auth-signup-screen-email">
     </input-label>
+
+    <div slot="info">
+        <div class="no-password-container">
+            <rt-badge>New</rt-badge>
+            <span class="no-password">Where is the password field?</span>
+            <tool-tip
+                class="cognito-signup-form__tooltip"
+                title="Where is the password field?"
+                description="Rotten Tomatoes now offers passwordless authentication for all user accounts, making it easier for you to access your information. Simply enter the email address you previously used and hit continue to complete your log-in."
+                slot="tooltip"
+                nomobilefooter
+            >
+                <button slot="tool-tip-btn" class="button--link">
+                    <rt-icon icon="question-circled" image></rt-icon>
+                </button>
+            </tool-tip>
+        </div>
+    </div>
+    
     <button slot="continue" class="auth-form__button" data-qa="auth-signup-screen-continue-btn">Continue</button>
+
+    <p slot="help" class="cognito-signup-form-help">
+        <a href="/reset-client">Trouble logging in?</a>
+    </p>
+    
     <p slot="terms-and-policies" class="cognito-signup-form__terms-and-policies">
-        By continuing, you agree to the 
-        <a href="https://www.fandango.com/policies/privacy-policy" target="_blank" data-qa="auth-signup-screen-privacy-policy-link"> Privacy Policy </a> 
-        and the<br>
-        <a href="https://www.fandango.com/policies/terms-and-policies" target="_blank" data-qa="auth-signup-screen-terms-policies-link"> Terms and Policies</a>
-        , and to receive email from Rotten Tomatoes.
+        By continuing, you agree to the <a href="https://www.fandango.com/policies/privacy-policy" target="_blank" data-qa="auth-signup-screen-privacy-policy-link">Privacy Policy</a> and 
+        the <a href="https://www.fandango.com/policies/terms-and-policies" target="_blank" data-qa="auth-signup-screen-terms-policies-link">Terms and Policies</a>, and to receive email from Rotten Tomatoes.
     </p>
 </auth-signup-screen>
 </template>
@@ -609,20 +623,20 @@
                                             
                                             <div class="cfpItem hidden-xs" data-qa="cert-fresh-item">
     <!-- Hardcorded rt url so pageheader on editorial routes to rt too -->
-    <a href="/m/what_josiah_saw" class="unstyled articleLink cfpLinks" data-qa="cert-fresh-link">
+    <a href="/m/breaking" class="unstyled articleLink cfpLinks" data-qa="cert-fresh-link">
         
             <p class="topText bold"></p>
         
         <div id="dropdown-cfp-image" class="imgContainer cfp-img-container">
-            <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com/Be5DWWsuQIV0F9hzOCKKY5c8tvI=/fit-in/180x240/v2/https://resizing.flixster.com/PHAUrjfpIvdQbLb1m_vj_5DXsXQ=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzM4ZDdiNjk2LWYyNzAtNDU1Mi1hOTcyLTI3N2I1YmYwZjYwNS5qcGc=" class="js-lazyLoad cfp-header-img" alt="What Josiah Saw"/>
+            <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com/TvPhMlSBxj98UrXJgyejs3GxsqY=/fit-in/180x240/v2/https://resizing.flixster.com/x-o8ch9mBn7nopEbds00Kn24ZxE=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2QzNGM0ZmYxLWEwZjctNDgyMy1iMjU4LTVkMTMwZjJiOTQ0Mi5qcGc=" class="js-lazyLoad cfp-header-img" alt="Breaking"/>
         </div>
         <div class="movie_content_area">
             
                 <span class="icon tiny certified"></span>
-                <span class="tMeterScore">90%</span>
+                <span class="tMeterScore">80%</span>
             
         </div>
-        <p class="title noSpacing">What Josiah Saw</p>
+        <p class="title noSpacing">Breaking</p>
     </a>
 </div>
 
@@ -644,7 +658,7 @@
         <div class="movie_content_area">
             
                 <span class="icon tiny certified"></span>
-                <span class="tMeterScore">95%</span>
+                <span class="tMeterScore">96%</span>
             
         </div>
         <p class="title noSpacing">The Territory</p>
@@ -699,7 +713,7 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/house_of_the_dragon/s01">
+        <a href="/tv/the_lord_of_the_rings_the_rings_of_power/s01">
             
                 <score-icon-critic
                     alignment="left"
@@ -712,29 +726,9 @@
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/house_of_the_dragon/s01" data-qa="list-item-link">
+        <a href="/tv/the_lord_of_the_rings_the_rings_of_power/s01" data-qa="list-item-link">
             
-                House of the Dragon: Season 1
-            
-        </a>
-    </td>
-</tr>
-
-                                             
-                                                
-                                                
-                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
-    <td class="left_col">
-        <a href="/tv/kevin_can_f_himself/s02">
-            
-                <span class="tMeterIcon tiny noRating">No Score Yet</span>
-            
-        </a>
-    </td>
-    <td class="middle_col">
-        <a href="/tv/kevin_can_f_himself/s02" data-qa="list-item-link">
-            
-                Kevin Can F**k Himself: Season 2
+                The Lord of the Rings: The Rings of Power: Season 1
             
         </a>
     </td>
@@ -745,31 +739,11 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/see/s03">
-            
-                <span class="tMeterIcon tiny noRating">No Score Yet</span>
-            
-        </a>
-    </td>
-    <td class="middle_col">
-        <a href="/tv/see/s03" data-qa="list-item-link">
-            
-                See: Season 3
-            
-        </a>
-    </td>
-</tr>
-
-                                             
-                                                
-                                                
-                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
-    <td class="left_col">
-        <a href="/tv/welcome_to_wrexham/s01">
+        <a href="/tv/the_patient/s01">
             
                 <score-icon-critic
                     alignment="left"
-                    percentage="91"
+                    percentage="85"
                     size="tiny"
                     slot="critic-score"
                     state="certified_fresh"
@@ -778,35 +752,9 @@
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/welcome_to_wrexham/s01" data-qa="list-item-link">
+        <a href="/tv/the_patient/s01" data-qa="list-item-link">
             
-                Welcome to Wrexham: Season 1
-            
-        </a>
-    </td>
-</tr>
-
-                                             
-                                                
-                                                
-                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
-    <td class="left_col">
-        <a href="/tv/mike/s01">
-            
-                <score-icon-critic
-                    alignment="left"
-                    percentage="54"
-                    size="tiny"
-                    slot="critic-score"
-                    state="rotten"
-                ></score-icon-critic>
-            
-        </a>
-    </td>
-    <td class="middle_col">
-        <a href="/tv/mike/s01" data-qa="list-item-link">
-            
-                Mike: Season 1
+                The Patient: Season 1
             
         </a>
     </td>
@@ -817,68 +765,16 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/mo/s01">
-            
-                <score-icon-critic
-                    alignment="left"
-                    percentage="100"
-                    size="tiny"
-                    slot="critic-score"
-                    state="fresh"
-                ></score-icon-critic>
-            
-        </a>
-    </td>
-    <td class="middle_col">
-        <a href="/tv/mo/s01" data-qa="list-item-link">
-            
-                Mo: Season 1
-            
-        </a>
-    </td>
-</tr>
-
-                                             
-                                                
-                                                
-                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
-    <td class="left_col">
-        <a href="/tv/partner_track/s01">
+        <a href="/tv/stargirl/s03">
             
                 <span class="tMeterIcon tiny noRating">No Score Yet</span>
             
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/partner_track/s01" data-qa="list-item-link">
+        <a href="/tv/stargirl/s03" data-qa="list-item-link">
             
-                Partner Track: Season 1
-            
-        </a>
-    </td>
-</tr>
-
-                                             
-                                                
-                                                
-                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
-    <td class="left_col">
-        <a href="/tv/little_demon/s01">
-            
-                <score-icon-critic
-                    alignment="left"
-                    percentage="83"
-                    size="tiny"
-                    slot="critic-score"
-                    state="fresh"
-                ></score-icon-critic>
-            
-        </a>
-    </td>
-    <td class="middle_col">
-        <a href="/tv/little_demon/s01" data-qa="list-item-link">
-            
-                Little Demon: Season 1
+                DC&#39;s Stargirl: Season 3
             
         </a>
     </td>
@@ -889,16 +785,16 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/star_trek_lower_decks/s03">
+        <a href="/tv/fakes/s01">
             
                 <span class="tMeterIcon tiny noRating">No Score Yet</span>
             
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/star_trek_lower_decks/s03" data-qa="list-item-link">
+        <a href="/tv/fakes/s01" data-qa="list-item-link">
             
-                Star Trek: Lower Decks: Season 3
+                Fakes: Season 1
             
         </a>
     </td>
@@ -909,16 +805,96 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/the_end_is_nye/s01">
+        <a href="/tv/life_by_ella/s01">
             
                 <span class="tMeterIcon tiny noRating">No Score Yet</span>
             
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/the_end_is_nye/s01" data-qa="list-item-link">
+        <a href="/tv/life_by_ella/s01" data-qa="list-item-link">
             
-                The End Is Nye: Season 1
+                Life by Ella: Season 1
+            
+        </a>
+    </td>
+</tr>
+
+                                             
+                                                
+                                                
+                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
+    <td class="left_col">
+        <a href="/tv/the_secrets_she_keeps/s02">
+            
+                <span class="tMeterIcon tiny noRating">No Score Yet</span>
+            
+        </a>
+    </td>
+    <td class="middle_col">
+        <a href="/tv/the_secrets_she_keeps/s02" data-qa="list-item-link">
+            
+                The Secrets She Keeps: Season 2
+            
+        </a>
+    </td>
+</tr>
+
+                                             
+                                                
+                                                
+                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
+    <td class="left_col">
+        <a href="/tv/keep_this_between_us/s01">
+            
+                <span class="tMeterIcon tiny noRating">No Score Yet</span>
+            
+        </a>
+    </td>
+    <td class="middle_col">
+        <a href="/tv/keep_this_between_us/s01" data-qa="list-item-link">
+            
+                Keep This Between Us: Season 1
+            
+        </a>
+    </td>
+</tr>
+
+                                             
+                                                
+                                                
+                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
+    <td class="left_col">
+        <a href="/tv/the_boleyns_a_scandalous_family/s01">
+            
+                <span class="tMeterIcon tiny noRating">No Score Yet</span>
+            
+        </a>
+    </td>
+    <td class="middle_col">
+        <a href="/tv/the_boleyns_a_scandalous_family/s01" data-qa="list-item-link">
+            
+                The Boleyns: A Scandalous Family: Season 1
+            
+        </a>
+    </td>
+</tr>
+
+                                             
+                                                
+                                                
+                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
+    <td class="left_col">
+        <a href="/tv/pantheon/s01">
+            
+                <span class="tMeterIcon tiny noRating">No Score Yet</span>
+            
+        </a>
+    </td>
+    <td class="middle_col">
+        <a href="/tv/pantheon/s01" data-qa="list-item-link">
+            
+                Pantheon: Season 1
             
         </a>
     </td>
@@ -944,6 +920,32 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
+        <a href="/tv/the_patient/s01">
+            
+                <score-icon-critic
+                    alignment="left"
+                    percentage="85"
+                    size="tiny"
+                    slot="critic-score"
+                    state="certified_fresh"
+                ></score-icon-critic>
+            
+        </a>
+    </td>
+    <td class="middle_col">
+        <a href="/tv/the_patient/s01" data-qa="list-item-link">
+            
+                The Patient: Season 1
+            
+        </a>
+    </td>
+</tr>
+
+                                             
+                                                
+                                                
+                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
+    <td class="left_col">
         <a href="/tv/house_of_the_dragon/s01">
             
                 <score-icon-critic
@@ -960,6 +962,32 @@
         <a href="/tv/house_of_the_dragon/s01" data-qa="list-item-link">
             
                 House of the Dragon: Season 1
+            
+        </a>
+    </td>
+</tr>
+
+                                             
+                                                
+                                                
+                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
+    <td class="left_col">
+        <a href="/tv/the_lord_of_the_rings_the_rings_of_power/s01">
+            
+                <score-icon-critic
+                    alignment="left"
+                    percentage="81"
+                    size="tiny"
+                    slot="critic-score"
+                    state="fresh"
+                ></score-icon-critic>
+            
+        </a>
+    </td>
+    <td class="middle_col">
+        <a href="/tv/the_lord_of_the_rings_the_rings_of_power/s01" data-qa="list-item-link">
+            
+                The Lord of the Rings: The Rings of Power: Season 1
             
         </a>
     </td>
@@ -996,42 +1024,22 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/the_lord_of_the_rings_the_rings_of_power/s01">
-            
-                <span class="tMeterIcon tiny noRating">No Score Yet</span>
-            
-        </a>
-    </td>
-    <td class="middle_col">
-        <a href="/tv/the_lord_of_the_rings_the_rings_of_power/s01" data-qa="list-item-link">
-            
-                The Lord of the Rings: The Rings of Power: Season 1
-            
-        </a>
-    </td>
-</tr>
-
-                                             
-                                                
-                                                
-                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
-    <td class="left_col">
-        <a href="/tv/the_sandman/s01">
+        <a href="/tv/mo/s01">
             
                 <score-icon-critic
                     alignment="left"
-                    percentage="86"
+                    percentage="100"
                     size="tiny"
                     slot="critic-score"
-                    state="certified_fresh"
+                    state="fresh"
                 ></score-icon-critic>
             
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/the_sandman/s01" data-qa="list-item-link">
+        <a href="/tv/mo/s01" data-qa="list-item-link">
             
-                The Sandman: Season 1
+                Mo: Season 1
             
         </a>
     </td>
@@ -1046,7 +1054,7 @@
             
                 <score-icon-critic
                     alignment="left"
-                    percentage="29"
+                    percentage="26"
                     size="tiny"
                     slot="critic-score"
                     state="rotten"
@@ -1068,11 +1076,11 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/only_murders_in_the_building/s02">
+        <a href="/tv/the_sandman/s01">
             
                 <score-icon-critic
                     alignment="left"
-                    percentage="98"
+                    percentage="87"
                     size="tiny"
                     slot="critic-score"
                     state="certified_fresh"
@@ -1081,9 +1089,9 @@
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/only_murders_in_the_building/s02" data-qa="list-item-link">
+        <a href="/tv/the_sandman/s01" data-qa="list-item-link">
             
-                Only Murders in the Building: Season 2
+                The Sandman: Season 1
             
         </a>
     </td>
@@ -1094,48 +1102,22 @@
                                                 
                                                 <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
     <td class="left_col">
-        <a href="/tv/better_call_saul/s06">
+        <a href="/tv/partner_track/s01">
             
                 <score-icon-critic
                     alignment="left"
-                    percentage="99"
+                    percentage="56"
                     size="tiny"
                     slot="critic-score"
-                    state="certified_fresh"
+                    state="rotten"
                 ></score-icon-critic>
             
         </a>
     </td>
     <td class="middle_col">
-        <a href="/tv/better_call_saul/s06" data-qa="list-item-link">
+        <a href="/tv/partner_track/s01" data-qa="list-item-link">
             
-                Better Call Saul: Season 6
-            
-        </a>
-    </td>
-</tr>
-
-                                             
-                                                
-                                                
-                                                <tr class="tv_show_tr tvTopListTitle" data-qa="list-item">
-    <td class="left_col">
-        <a href="/tv/mo/s01">
-            
-                <score-icon-critic
-                    alignment="left"
-                    percentage="100"
-                    size="tiny"
-                    slot="critic-score"
-                    state="fresh"
-                ></score-icon-critic>
-            
-        </a>
-    </td>
-    <td class="middle_col">
-        <a href="/tv/mo/s01" data-qa="list-item-link">
-            
-                Mo: Season 1
+                Partner Track: Season 1
             
         </a>
     </td>
@@ -1226,18 +1208,18 @@
                                             
                                             <div class="cfpItem hidden-xs" data-qa="cert-fresh-item">
     <!-- Hardcorded rt url so pageheader on editorial routes to rt too -->
-    <a href="/tv/bad_sisters/s01" class="unstyled articleLink cfpLinks" data-qa="cert-fresh-link">
+    <a href="/tv/the_patient" class="unstyled articleLink cfpLinks" data-qa="cert-fresh-link">
         
         <div id="dropdown-cfp-image" class="imgContainer cfp-img-container">
-            <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com/3q0KCru4Ral-RqOjt7FI2W5LT8Y=/fit-in/180x240/v2/https://resizing.flixster.com/SidhAFhkDa_aWv9fwhF_F9nZzRc=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vMTMwNmVmYjgtM2Q4NC00YmNkLTg4MzAtYmFkZDliMWMzOTFhLnBuZw==" class="js-lazyLoad cfp-header-img" alt="Bad Sisters: Season 1"/>
+            <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com/vo3cO0B8di3AYVLmrPtnk1x8ebM=/fit-in/180x240/v2/https://resizing.flixster.com/fao_NMcdUkXKqWJXyEH6HewIi0s=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvMWQ0NDc5Y2MtZmQ1OC00MDljLWE1MmQtZGE3M2MyYzgzNGRjLmpwZw==" class="js-lazyLoad cfp-header-img" alt="The Patient"/>
         </div>
         <div class="movie_content_area">
             
                 <span class="icon tiny certified"></span>
-                <span class="tMeterScore">100%</span>
+                <span class="tMeterScore">85%</span>
             
         </div>
-        <p class="title noSpacing">Bad Sisters: Season 1</p>
+        <p class="title noSpacing">The Patient</p>
     </a>
 </div>
 
@@ -1330,22 +1312,22 @@
                                         <div class="newsContainer">
                                             
                                                 <div class="newsContainerItem" data-qa="guides-item">
-                                                    <a href="https://editorial.rottentomatoes.com/rt-hub/tv-news-2022/" class="articleLink unstyled" data-qa="guides-link">
-                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2020/02/08113554/tv-news-featured-image.jpg" data-bg-image="true"></div>
+                                                    <a href="https://editorial.rottentomatoes.com/rt-hub/binge-central/" class="articleLink unstyled" data-qa="guides-link">
+                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/08/29202814/RT_BINGE_CENTRAL_SPONSORED_FX_600X314.jpg" data-bg-image="true"></div>
                                                         <div class="newsTitleContainer">
                                                             <div class="newsTitle">
-                                                                TV and Streaming News
+                                                                Binge Central
                                                             </div>
                                                         </div>
                                                     </a>
                                                 </div>
                                             
                                                 <div class="newsContainerItem" data-qa="guides-item">
-                                                    <a href="https://editorial.rottentomatoes.com/rt-hub/rt-comic-con-ketchup/" class="articleLink unstyled" data-qa="guides-link">
-                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/07/19170611/black-adam-600x314-1.jpg" data-bg-image="true"></div>
+                                                    <a href="https://editorial.rottentomatoes.com/rt-hub/tv-news-2022/" class="articleLink unstyled" data-qa="guides-link">
+                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2020/02/08113554/tv-news-featured-image.jpg" data-bg-image="true"></div>
                                                         <div class="newsTitleContainer">
                                                             <div class="newsTitle">
-                                                                RT Comic-Con Ketchup
+                                                                TV and Streaming News
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1365,22 +1347,22 @@
                                         <div class="newsContainer">
                                             
                                                 <div class="newsContainerItem" data-qa="rt-news-item">
-                                                    <a href="https://editorial.rottentomatoes.com/article/renewed-and-cancelled-tv-shows-2022/" class="articleLink unstyled" data-qa="rt-news-link">
-                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/03/14105125/TheUmbrellaAcademy_Season3_Episode1_600x314.jpg" data-bg-image="true"></div>
+                                                    <a href="https://editorial.rottentomatoes.com/article/the-lord-of-the-rings-the-rings-of-power-season-1-first-reviews/" class="articleLink unstyled" data-qa="rt-news-link">
+                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/08/31085534/lotr-trop-s1-prince-durin-600x314-1.jpg" data-bg-image="true"></div>
                                                         <div class="newsTitleContainer">
                                                             <div class="newsTitle">
-                                                                Renewed and Cancelled TV Shows 2022
+                                                                <em>The Lord of the Rings: The Rings of Power</em> First Reviews: &#8216;Bold,&#8217; &#8216;Ambitious,&#8217; &#8216;Gorgeous,&#8217; &#8216;Full of Grandeur,&#8217; Critics Say
                                                             </div>
                                                         </div>
                                                     </a>
                                                 </div>
                                             
                                                 <div class="newsContainerItem" data-qa="rt-news-item">
-                                                    <a href="https://editorial.rottentomatoes.com/article/tv-premiere-dates-2022/" class="articleLink unstyled" data-qa="rt-news-link">
-                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/08/25085228/hellraiser-key-art600.png" data-bg-image="true"></div>
+                                                    <a href="https://editorial.rottentomatoes.com/article/new-on-netflix-in-september-2022/" class="articleLink unstyled" data-qa="rt-news-link">
+                                                        <div class="newsPhoto js-lazyLoad" data-src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/08/30093840/CK5_key-art-600x314-1.jpg" data-bg-image="true"></div>
                                                         <div class="newsTitleContainer">
                                                             <div class="newsTitle">
-                                                                TV Premiere Dates 2022
+                                                                New on Netflix in September 2022
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1451,13 +1433,11 @@
         <ul class="list-inline trendingEl" data-qa="trending-bar-list">
             <li class="header">Trending on RT</li>
             
-                <li><a class="unstyled trendingLink" href="https://www.rottentomatoes.com/tv/house_of_the_dragon"  data-qa="trending-bar-item"> House of the Dragon </a></li>
+                <li><a class="unstyled trendingLink" href="https://www.rottentomatoes.com/tv/the_lord_of_the_rings_the_rings_of_power"  data-qa="trending-bar-item"> The Lord of the Rings: The Rings of Power </a></li>
             
-                <li><a class="unstyled trendingLink" href="https://editorial.rottentomatoes.com/guide/best-hbo-series-of-all-time-ranked/"  data-qa="trending-bar-item"> HBO Series Ranked </a></li>
+                <li><a class="unstyled trendingLink" href="https://www.rottentomatoes.com/m/three_thousand_years_of_longing"  data-qa="trending-bar-item"> Three Thousand Years of Longing </a></li>
             
-                <li><a class="unstyled trendingLink" href="https://www.rottentomatoes.com/m/dragon_ball_super_super_hero"  data-qa="trending-bar-item"> Dragon Ball Super: Super Hero </a></li>
-            
-                <li><a class="unstyled trendingLink" href="https://editorial.rottentomatoes.com/guide/dc-animated-movies-in-order/"  data-qa="trending-bar-item"> DC Animated Movies In Order </a></li>
+                <li><a class="unstyled trendingLink" href="https://www.rottentomatoes.com/m/nope"  data-qa="trending-bar-item"> Nope </a></li>
             
         </ul>
       </div>
@@ -1719,21 +1699,10 @@
           >
           
             <discovery-sidebar-item
-              title="Three Thousand Years of Longing"
-              mediaUrl="/m/three_thousand_years_of_longing"
+              title="Root Letter"
+              mediaUrl="/m/root_letter"
               boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="fresh"
-              tomatometerScore="64"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="The Invitation"
-              mediaUrl="/m/the_invitation_2022_2"
-              boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 01"
               tomatometerStatus=""
               tomatometerScore=""
               type=""
@@ -1741,144 +1710,155 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Breaking"
-              mediaUrl="/m/breaking"
+              title="First Day First Show"
+              mediaUrl="/m/first_day_first_show"
               boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="fresh"
-              tomatometerScore="77"
+              releaseDate="Sep 01"
+              tomatometerStatus=""
+              tomatometerScore=""
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="The Good Boss"
-              mediaUrl="/m/the_good_boss"
+              title="Honk for Jesus. Save Your Soul."
+              mediaUrl="/m/honk_for_jesus_save_your_soul"
               boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="certified-fresh"
+              releaseDate="Sep 02"
+              tomatometerStatus="fresh"
+              tomatometerScore="81"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Saloum"
+              mediaUrl="/m/saloum"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus="fresh"
+              tomatometerScore="100"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Gigi &amp; Nate"
+              mediaUrl="/m/gigi_and_nate"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus="rotten"
+              tomatometerScore="0"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Blind Ambition"
+              mediaUrl="/m/blind_ambition_2021"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus="fresh"
+              tomatometerScore="100"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Burial"
+              mediaUrl="/m/burial"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus="fresh"
               tomatometerScore="93"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Funny Pages"
-              mediaUrl="/m/funny_pages"
+              title="Loving Highsmith"
+              mediaUrl="/m/loving_highsmith"
               boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 02"
               tomatometerStatus="fresh"
-              tomatometerScore="83"
+              tomatometerScore="100"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Adopting Audrey"
-              mediaUrl="/m/adopting_audrey"
+              title="Peter von Kant"
+              mediaUrl="/m/peter_von_kant"
               boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 02"
               tomatometerStatus="fresh"
-              tomatometerScore="86"
+              tomatometerScore="75"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Alienoid"
-              mediaUrl="/m/alienoid"
+              title="The Harbinger"
+              mediaUrl="/m/the_harbinger"
               boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 02"
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="One Way"
+              mediaUrl="/m/one_way_2022"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="All Eyes"
+              mediaUrl="/m/all_eyes"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Waiting for Bojangles"
+              mediaUrl="/m/waiting_for_bojangles"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Wire Room"
+              mediaUrl="/m/wire_room"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Tiny Cinema"
+              mediaUrl="/m/tiny_cinema"
+              boxOffice=""
+              releaseDate="Sep 02"
               tomatometerStatus="fresh"
-              tomatometerScore="64"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Private Desert"
-              mediaUrl="/m/private_desert"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="fresh"
-              tomatometerScore="89"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="The Stranger in Our Bed"
-              mediaUrl="/m/the_stranger_in_our_bed"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Into the Deep"
-              mediaUrl="/m/into_the_deep_2022"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Out of the Blue"
-              mediaUrl="/m/out_of_the_blue_2022"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="rotten"
-              tomatometerScore="9"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Maneater"
-              mediaUrl="/m/maneater_2022"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="rotten"
-              tomatometerScore="43"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Last Journey of Paul W.R."
-              mediaUrl="/m/the_last_journey_of_paul_wr"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Jane"
-              mediaUrl="/m/jane_2022"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Adieu Godard"
-              mediaUrl="/m/adieu_godard"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus=""
-              tomatometerScore=""
+              tomatometerScore="100"
               type=""
             >
             </discovery-sidebar-item>
@@ -1893,10 +1873,10 @@
           >
           
             <discovery-sidebar-item
-              title="The Day After Halloween"
-              mediaUrl="/m/the_day_after_halloween_2022"
+              title="After Ever Happy"
+              mediaUrl="/m/after_ever_happy"
               boxOffice=""
-              releaseDate="Aug 30"
+              releaseDate="Sep 07"
               tomatometerStatus=""
               tomatometerScore=""
               type="date"
@@ -1904,10 +1884,10 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Root Letter"
-              mediaUrl="/m/root_letter"
+              title="Barbarian"
+              mediaUrl="/m/barbarian_2022"
               boxOffice=""
-              releaseDate="Sep 01"
+              releaseDate="Sep 09"
               tomatometerStatus=""
               tomatometerScore=""
               type="date"
@@ -1915,34 +1895,34 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Honk for Jesus. Save Your Soul."
-              mediaUrl="/m/honk_for_jesus_save_your_soul"
+              title="Medieval"
+              mediaUrl="/m/medieval"
               boxOffice=""
-              releaseDate="Sep 02"
-              tomatometerStatus="fresh"
-              tomatometerScore="88"
+              releaseDate="Sep 09"
+              tomatometerStatus=""
+              tomatometerScore=""
               type="date"
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Blind Ambition"
-              mediaUrl="/m/blind_ambition_2021"
+              title="About Fate"
+              mediaUrl="/m/about_fate"
               boxOffice=""
-              releaseDate="Sep 02"
-              tomatometerStatus="fresh"
-              tomatometerScore="100"
+              releaseDate="Sep 09"
+              tomatometerStatus=""
+              tomatometerScore=""
               type="date"
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Saloum"
-              mediaUrl="/m/saloum"
+              title="True Things"
+              mediaUrl="/m/true_things"
               boxOffice=""
-              releaseDate="Sep 02"
-              tomatometerStatus="fresh"
-              tomatometerScore="100"
+              releaseDate="Sep 09"
+              tomatometerStatus="certified-fresh"
+              tomatometerScore="83"
               type="date"
             >
             </discovery-sidebar-item>
@@ -1961,21 +1941,98 @@
           >
           
             <discovery-sidebar-item
-              title="Ali &amp; Ava"
-              mediaUrl="/m/ali_and_ava"
-              boxOffice=""
-              releaseDate="Jul 29"
-              tomatometerStatus="certified-fresh"
-              tomatometerScore="94"
+              title="Paws of Fury: The Legend of Hank"
+              mediaUrl="/m/paws_of_fury_the_legend_of_hank"
+              boxOffice="$17.8M"
+              releaseDate="Jul 15"
+              tomatometerStatus="rotten"
+              tomatometerScore="54"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Olga"
-              mediaUrl="/m/olga_2021"
-              boxOffice="$10.9K"
-              releaseDate="Jun 24"
+              title="Explorer"
+              mediaUrl="/m/explorer_2022"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus="fresh"
+              tomatometerScore="100"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="My Donkey, My Lover &amp; I"
+              mediaUrl="/m/my_donkey_my_lover_and_i"
+              boxOffice=""
+              releaseDate="Jul 22"
+              tomatometerStatus="certified-fresh"
+              tomatometerScore="89"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Forbearance"
+              mediaUrl="/m/forbearance"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="I Came By"
+              mediaUrl="/m/i_came_by"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus="fresh"
+              tomatometerScore="63"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Under Her Control"
+              mediaUrl="/m/under_her_control"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Under Her Control"
+              mediaUrl="/m/4e253b90-ca6e-4c3b-b3cd-590f774d0643"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Kill-Fist"
+              mediaUrl="/m/kill_fist"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus=""
+              tomatometerScore=""
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Who Invited Them"
+              mediaUrl="/m/who_invited_them"
+              boxOffice=""
+              releaseDate=""
               tomatometerStatus="fresh"
               tomatometerScore="90"
               type=""
@@ -1983,19 +2040,8 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="The Runner"
-              mediaUrl="/m/the_runner_2021"
-              boxOffice=""
-              releaseDate="Aug 19"
-              tomatometerStatus="rotten"
-              tomatometerScore="30"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Running with the Devil: The Wild World of John McAfee"
-              mediaUrl="/m/running_with_the_devil_the_wild_world_of_john_mcafee"
+              title="Love in the Villa"
+              mediaUrl="/m/love_in_the_villa"
               boxOffice=""
               releaseDate=""
               tomatometerStatus=""
@@ -2005,10 +2051,10 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Katrina Babies"
-              mediaUrl="/m/katrina_babies"
+              title="Root Letter"
+              mediaUrl="/m/root_letter"
               boxOffice=""
-              releaseDate=""
+              releaseDate="Sep 01"
               tomatometerStatus=""
               tomatometerScore=""
               type=""
@@ -2016,76 +2062,65 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Watch Out, We&#39;re Mad"
-              mediaUrl="/m/watch_out_were_mad_2022"
+              title="Honk for Jesus. Save Your Soul."
+              mediaUrl="/m/honk_for_jesus_save_your_soul"
               boxOffice=""
-              releaseDate=""
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="That&#39;s Amor"
-              mediaUrl="/m/thats_amor"
-              boxOffice=""
-              releaseDate=""
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Samaritan"
-              mediaUrl="/m/samaritan_2022"
-              boxOffice=""
-              releaseDate=""
-              tomatometerStatus="rotten"
-              tomatometerScore="45"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Funny Pages"
-              mediaUrl="/m/funny_pages"
-              boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 02"
               tomatometerStatus="fresh"
-              tomatometerScore="83"
+              tomatometerScore="81"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Me Time"
-              mediaUrl="/m/me_time_2022"
-              boxOffice=""
-              releaseDate=""
-              tomatometerStatus=""
-              tomatometerScore=""
+              title="Jurassic World Dominion"
+              mediaUrl="/m/jurassic_world_dominion"
+              boxOffice="$374.8M"
+              releaseDate="Jun 10"
+              tomatometerStatus="rotten"
+              tomatometerScore="29"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Adopting Audrey"
-              mediaUrl="/m/adopting_audrey"
+              title="Blind Ambition"
+              mediaUrl="/m/blind_ambition_2021"
               boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 02"
               tomatometerStatus="fresh"
-              tomatometerScore="86"
+              tomatometerScore="100"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Into the Deep"
-              mediaUrl="/m/into_the_deep_2022"
+              title="Burial"
+              mediaUrl="/m/burial"
               boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 02"
+              tomatometerStatus="fresh"
+              tomatometerScore="93"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Loving Highsmith"
+              mediaUrl="/m/loving_highsmith"
+              boxOffice=""
+              releaseDate="Sep 02"
+              tomatometerStatus="fresh"
+              tomatometerScore="100"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="The Harbinger"
+              mediaUrl="/m/the_harbinger"
+              boxOffice=""
+              releaseDate="Sep 02"
               tomatometerStatus=""
               tomatometerScore=""
               type=""
@@ -2093,32 +2128,10 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Out of the Blue"
-              mediaUrl="/m/out_of_the_blue_2022"
+              title="One Way"
+              mediaUrl="/m/one_way_2022"
               boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="rotten"
-              tomatometerScore="9"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Maneater"
-              mediaUrl="/m/maneater_2022"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus="rotten"
-              tomatometerScore="43"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Loving Adults"
-              mediaUrl="/m/loving_adults"
-              boxOffice=""
-              releaseDate=""
+              releaseDate="Sep 02"
               tomatometerStatus=""
               tomatometerScore=""
               type=""
@@ -2126,10 +2139,10 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Last Journey of Paul W.R."
-              mediaUrl="/m/the_last_journey_of_paul_wr"
+              title="All Eyes"
+              mediaUrl="/m/all_eyes"
               boxOffice=""
-              releaseDate="Aug 26"
+              releaseDate="Sep 02"
               tomatometerStatus=""
               tomatometerScore=""
               type=""
@@ -2137,43 +2150,10 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Adieu Godard"
-              mediaUrl="/m/adieu_godard"
+              title="Wire Room"
+              mediaUrl="/m/wire_room"
               boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="The Youth Governor"
-              mediaUrl="/m/the_youth_governor"
-              boxOffice=""
-              releaseDate="Aug 26"
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Seoul Vibe"
-              mediaUrl="/m/seoul_vibe"
-              boxOffice=""
-              releaseDate=""
-              tomatometerStatus=""
-              tomatometerScore=""
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Untrapped: The Story of Lil Baby"
-              mediaUrl="/m/untrapped_the_story_of_lil_baby"
-              boxOffice=""
-              releaseDate=""
+              releaseDate="Sep 02"
               tomatometerStatus=""
               tomatometerScore=""
               type=""
@@ -2194,56 +2174,56 @@
           >
           
             <discovery-sidebar-item
-              title="She-Hulk: Attorney at Law"
-              mediaUrl="/tv/she_hulk_attorney_at_law"
+              title="Welcome to Wrexham"
+              mediaUrl="/tv/welcome_to_wrexham"
               boxOffice=""
               releaseDate=""
               tomatometerStatus="fresh"
-              tomatometerScore="88"
+              tomatometerScore="89"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="The Resort"
-              mediaUrl="/tv/the_resort"
+              title="Reservation Dogs"
+              mediaUrl="/tv/reservation_dogs"
               boxOffice=""
               releaseDate=""
               tomatometerStatus="fresh"
-              tomatometerScore="85"
+              tomatometerScore="99"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Harley Quinn"
-              mediaUrl="/tv/harley_quinn"
+              title="Resident Alien"
+              mediaUrl="/tv/resident_alien"
               boxOffice=""
               releaseDate=""
               tomatometerStatus="fresh"
-              tomatometerScore="96"
+              tomatometerScore="94"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="American Horror Stories"
-              mediaUrl="/tv/american_horror_stories"
+              title="Archer"
+              mediaUrl="/tv/archer"
               boxOffice=""
               releaseDate=""
-              tomatometerStatus="rotten"
-              tomatometerScore="50"
+              tomatometerStatus="fresh"
+              tomatometerScore="90"
               type=""
             >
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
-              title="Rap Sh!t"
-              mediaUrl="/tv/rap_sh_t"
+              title="High School Musical: The Musical: The Series"
+              mediaUrl="/tv/high_school_musical_the_musical"
               boxOffice=""
               releaseDate=""
               tomatometerStatus="fresh"
-              tomatometerScore="100"
+              tomatometerScore="75"
               type=""
             >
             </discovery-sidebar-item>
@@ -2258,17 +2238,6 @@
           >
           
             <discovery-sidebar-item
-              title="House of the Dragon"
-              mediaUrl="/tv/house_of_the_dragon"
-              boxOffice=""
-              releaseDate=""
-              tomatometerStatus="fresh"
-              tomatometerScore="83"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
               title="She-Hulk: Attorney at Law"
               mediaUrl="/tv/she_hulk_attorney_at_law"
               boxOffice=""
@@ -2280,34 +2249,45 @@
             </discovery-sidebar-item>
           
             <discovery-sidebar-item
+              title="House of the Dragon"
+              mediaUrl="/tv/house_of_the_dragon"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus="fresh"
+              tomatometerScore="83"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="The Lord of the Rings: The Rings of Power"
+              mediaUrl="/tv/the_lord_of_the_rings_the_rings_of_power"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus="fresh"
+              tomatometerScore="81"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
+              title="Echoes"
+              mediaUrl="/tv/echoes"
+              boxOffice=""
+              releaseDate=""
+              tomatometerStatus="rotten"
+              tomatometerScore="26"
+              type=""
+            >
+            </discovery-sidebar-item>
+          
+            <discovery-sidebar-item
               title="The Sandman"
               mediaUrl="/tv/the_sandman"
               boxOffice=""
               releaseDate=""
               tomatometerStatus="fresh"
-              tomatometerScore="86"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Better Call Saul"
-              mediaUrl="/tv/better_call_saul"
-              boxOffice=""
-              releaseDate=""
-              tomatometerStatus="fresh"
-              tomatometerScore="98"
-              type=""
-            >
-            </discovery-sidebar-item>
-          
-            <discovery-sidebar-item
-              title="Game of Thrones"
-              mediaUrl="/tv/game_of_thrones"
-              boxOffice=""
-              releaseDate=""
-              tomatometerStatus="fresh"
-              tomatometerScore="89"
+              tomatometerScore="87"
               type=""
             >
             </discovery-sidebar-item>
@@ -4252,7 +4232,7 @@
                 
                 <li class="meta-row clearfix" data-qa="movie-info-item">
                     <div class="meta-label subtle" data-qa="movie-info-item-label">Box Office (Gross USA):</div>
-                    <div class="meta-value" data-qa="movie-info-item-value">$439.0M</div>
+                    <div class="meta-value" data-qa="movie-info-item-value">$439.2M</div>
                 </li>
                 
                 
@@ -5829,7 +5809,7 @@ This is one of the greatest movies ever made. Truly reminds me of the magic of c
               <img
                 href="/images/video.default.jpg"
                 class="js-lazyLoad movie-and-tv-guides-item__image home__thumbnail"
-                data-src="https://resizing.flixster.com/IKv7BUN8ONZBHq8xpZJ3jy2lT7Y=/370x208/v2/https://images.fandango.com/cms/assets/f2ee73b0-171c-11ed-90fe-f325d9bf4959--blackpantherwakandaforever.jpg"
+                data-src="https://resizing.flixster.com/x2oeSqKSe8StdsRmScH_G9H11cM=/370x208/v2/https://images.fandango.com/cms/assets/aa061d00-2960-11ed-bbb0-99bdf247c629--blackpanther.jpg"
                 alt="Most Anticipated 2022 Movies"
               />
               <p class="movie-and-tv-guides-item__main">
@@ -5843,7 +5823,7 @@ This is one of the greatest movies ever made. Truly reminds me of the magic of c
               <img
                 href="/images/video.default.jpg"
                 class="js-lazyLoad movie-and-tv-guides-item__image home__thumbnail"
-                data-src="https://resizing.flixster.com/7mWevJkzD0GitGmyN3fwmOzHIL8=/370x208/v2/https://images.fandango.com/cms/assets/1038b8a0-1762-11ed-bbb0-99bdf247c629--hp-carousel-prey.jpg"
+                data-src="https://resizing.flixster.com/mhbzSUvEJb1UR4Ybo0vMetl3F8M=/370x208/v2/https://images.fandango.com/cms/assets/24be2ac0-2721-11ed-bbb0-99bdf247c629--550invitation-bo.jpg"
                 alt="Best Horror Movies of 2022"
               />
               <p class="movie-and-tv-guides-item__main">
@@ -5871,7 +5851,7 @@ This is one of the greatest movies ever made. Truly reminds me of the magic of c
               <img
                 href="/images/video.default.jpg"
                 class="js-lazyLoad movie-and-tv-guides-item__image home__thumbnail"
-                data-src="https://resizing.flixster.com/I1g3XkaiYnI8o1vW4DkQf7p_-rE=/370x208/v2/https://images.fandango.com/cms/assets/e384b910-171d-11ed-90fe-f325d9bf4959--lotr-ringsofpower.jpg"
+                data-src="https://resizing.flixster.com/2nBgq4G6vENC9pvAvAkInSlJVss=/370x208/v2/https://images.fandango.com/cms/assets/792dd740-2960-11ed-b2f6-e1f3892e3f59--andor.jpg"
                 alt="Most Anticipated 2022 TV & Streaming"
               />
               <p class="movie-and-tv-guides-item__main">
@@ -6196,12 +6176,12 @@ This is one of the greatest movies ever made. Truly reminds me of the magic of c
 root.RottenTomatoes || (root.RottenTomatoes = {});
 root.RottenTomatoes.context = {"_routes":{"adminManagePeople":{"path":"https:\u002F\u002Fadmin.flixster.com\u002Fadmin\u002Fmanage-people?id=:id","tokens":[{"literal":"https:\u002F\u002Fadmin.flixster.com\u002Fadmin\u002Fmanage-people?id="},{"key":"id"}]},"adminMerge":{"path":"https:\u002F\u002Fadmin.flixster.com\u002Factor\u002Fmerge?from=:id","tokens":[{"literal":"https:\u002F\u002Fadmin.flixster.com\u002Factor\u002Fmerge?from="},{"key":"id"}]},"baseCanonicalUrl":{"path":"https:\u002F\u002Fwww.rottentomatoes.com","tokens":[{"literal":"https:\u002F\u002Fwww.rottentomatoes.com"}]},"webCriticSourceReviewsNapi":{"path":"\u002Fnapi\u002Fcritics\u002Fsource\u002F:publicationId\u002F:type(movies|tv)","tokens":[{"literal":"\u002Fnapi\u002Fcritics\u002Fsource\u002F"},{"key":"publicationId"},{"literal":"\u002F"},{"key":"type"}]},"editorialPageCodeOfConduct":{"path":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fotg-article\u002Fcommunity-code-of-conduct","tokens":[{"literal":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fotg-article\u002Fcommunity-code-of-conduct"}]},"editorialPageProductBlog":{"path":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-product-blog","tokens":[{"literal":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-product-blog"}]},"flixsterGeoLocationApi":{"path":"https:\u002F\u002Fapi.flixster.com\u002Fticketing\u002Fapi\u002Fv1\u002Fgeoip","tokens":[{"literal":"https:\u002F\u002Fapi.flixster.com\u002Fticketing\u002Fapi\u002Fv1\u002Fgeoip"}]},"commonAccountForgotPWNapi":{"path":"\u002Fnapi\u002Faccount\u002FforgotPassword\u002F","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002FforgotPassword\u002F"}]},"commonAccountLoginNapi":{"path":"\u002Fnapi\u002Faccount\u002Flogin\u002F","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002Flogin\u002F"}]},"commonAccountLoginFacebookOauthNapi":{"path":"\u002Fnapi\u002Faccount\u002FloginFacebookOauth\u002F","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002FloginFacebookOauth\u002F"}]},"commonAccountLogoutNapi":{"path":"\u002Fnapi\u002Faccount\u002Flogout\u002F","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002Flogout\u002F"}]},"commonAccountRegisterNapi":{"path":"\u002Fnapi\u002Faccount\u002Fregister\u002F","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002Fregister\u002F"}]},"commonAccountThemePreferencesNapi":{"path":"\u002Fnapi\u002Fpreferences\u002Fthemes","tokens":[{"literal":"\u002Fnapi\u002Fpreferences\u002Fthemes"}]},"commonAccountVerifyTokenNapi":{"path":"\u002Fnapi\u002Faccount\u002FverifyToken\u002F","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002FverifyToken\u002F"}]},"commonUserRatingsWTSCountNapi":{"path":"\u002Fnapi\u002Fuser\u002Fcounts","tokens":[{"literal":"\u002Fnapi\u002Fuser\u002Fcounts"}]},"commonAutocompleteNapi":{"path":"\u002Fnapi\u002Flocation\u002Fautocomplete\u002F:text","tokens":[{"literal":"\u002Fnapi\u002Flocation\u002Fautocomplete\u002F"},{"key":"text"}]},"commonGetLocationFromTextNapi":{"path":"\u002Fnapi\u002Flocation\u002Ftext","tokens":[{"literal":"\u002Fnapi\u002Flocation\u002Ftext"}]},"webShowtimesMoviesNapi":{"path":"\u002Fnapi\u002Fmovies\u002F:ids","tokens":[{"literal":"\u002Fnapi\u002Fmovies\u002F"},{"key":"ids"}]},"webShowtimesMovieCalendarNapi":{"path":"\u002Fnapi\u002FmovieCalendar\u002F:title-:id(\\d+)","tokens":[{"literal":"\u002Fnapi\u002FmovieCalendar\u002F"},{"key":"title"},{"literal":"-"},{"key":"id"}]},"webBrowseMovieListDvdAllNapi":{"path":"\u002Fnapi\u002FmovieList\u002FdvdAll","tokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FdvdAll"}]},"webBrowseMovieListOpeningNapi":{"path":"\u002Fnapi\u002FmovieList\u002FOpening","tokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FOpening"}]},"webBrowseMovieListUpcomingNapi":{"path":"\u002Fnapi\u002FmovieList\u002FUpcoming","tokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FUpcoming"}]},"webBrowseMovieListDvdUpcomingNapi":{"path":"\u002Fnapi\u002FmovieList\u002FdvdUpcoming","tokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FdvdUpcoming"}]},"webBrowseMovieListDvdCertifiedNapi":{"path":"\u002Fnapi\u002FmovieList\u002FdvdCertified","tokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FdvdCertified"}]},"webShowtimesMovieShowtimeGroupingsNapi":{"path":"\u002Fnapi\u002FtheaterShowtimeGroupings\u002F:id(\\d+)\u002F:startDate","tokens":[{"literal":"\u002Fnapi\u002FtheaterShowtimeGroupings\u002F"},{"key":"id"},{"literal":"\u002F"},{"key":"startDate"}]},"webMovieReviewsGetAudienceReviewNapi":{"path":"\u002Fnapi\u002Fmovie\u002F:movieId\u002Freviews\u002F:type(user|verified_audience)","tokens":[{"literal":"\u002Fnapi\u002Fmovie\u002F"},{"key":"movieId"},{"literal":"\u002Freviews\u002F"},{"key":"type"}]},"webMovieReviewsGetCriticsReviewNapi":{"path":"\u002Fnapi\u002Fmovie\u002F:movieId\u002FcriticsReviews\u002F:type(all|top_critics)\u002F:sort?","tokens":[{"literal":"\u002Fnapi\u002Fmovie\u002F"},{"key":"movieId"},{"literal":"\u002FcriticsReviews\u002F"},{"key":"type"},{"literal":"\u002F"},{"key":"sort"},{"literal":"?"}]},"commonTrackingFreewheelPixelSyncNapi":{"path":"\u002Fnapi\u002Ftracking\u002Ffreewheel\u002Fpixelsync","tokens":[{"literal":"\u002Fnapi\u002Ftracking\u002Ffreewheel\u002Fpixelsync"}]},"webTvEpisodeGetReviewsNapi":{"path":"\u002Fnapi\u002Ftv\u002F:vanity\u002F:tvSeason\u002F:tvEpisode\u002Freviews\u002F:type(all|top_critics)","tokens":[{"literal":"\u002Fnapi\u002Ftv\u002F"},{"key":"vanity"},{"literal":"\u002F"},{"key":"tvSeason"},{"literal":"\u002F"},{"key":"tvEpisode"},{"literal":"\u002Freviews\u002F"},{"key":"type"}]},"webSeasonReviewsGetReviewsNapi":{"path":"\u002Fnapi\u002FseasonReviews\u002F:id","tokens":[{"literal":"\u002Fnapi\u002FseasonReviews\u002F"},{"key":"id"}]},"commonSearchNapi":{"path":"\u002Fnapi\u002Fsearch\u002Fall","tokens":[{"literal":"\u002Fnapi\u002Fsearch\u002Fall"}]},"commonSearchAllCategoriesNapi":{"path":"\u002Fnapi\u002Fsearch\u002F","tokens":[{"literal":"\u002Fnapi\u002Fsearch\u002F"}]},"commonSearchTopMoviesDefaultListNapi":{"path":"\u002Fnapi\u002Fsearch\u002Fdefault-list","tokens":[{"literal":"\u002Fnapi\u002Fsearch\u002Fdefault-list"}]},"webShowtimesTheatersWithShowtimesNapi":{"path":"\u002Fnapi\u002FtheatersShowtimes\u002F:location\u002F:date","tokens":[{"literal":"\u002Fnapi\u002FtheatersShowtimes\u002F"},{"key":"location"},{"literal":"\u002F"},{"key":"date"}]},"webTvSeasonGetEpisodesNapi":{"path":"\u002Fnapi\u002Ftv\u002F:vanity\u002F:tvSeason\u002Fepisodes","tokens":[{"literal":"\u002Fnapi\u002Ftv\u002F"},{"key":"vanity"},{"literal":"\u002F"},{"key":"tvSeason"},{"literal":"\u002Fepisodes"}]},"commonUserEmailConfirmationNapi":{"path":"\u002Fnapi\u002Faccount\u002FemailConfirmation","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002FemailConfirmation"}]},"commonUserEmailStatusNapi":{"path":"\u002Fnapi\u002Faccount\u002FemailStatus","tokens":[{"literal":"\u002Fnapi\u002Faccount\u002FemailStatus"}]},"commonUserWTSCreateNapi":{"path":"\u002Fnapi\u002Fuser\u002Fwts","tokens":[{"literal":"\u002Fnapi\u002Fuser\u002Fwts"}]},"commonUserWTSDeleteNapi":{"path":"\u002Fnapi\u002Fuser\u002Fwts\u002Fdelete","tokens":[{"literal":"\u002Fnapi\u002Fuser\u002Fwts\u002Fdelete"}]},"commonUserRatingCreateNapi":{"path":"\u002Fnapi\u002Fuser\u002Frating","tokens":[{"literal":"\u002Fnapi\u002Fuser\u002Frating"}]},"commonUserGetWTSNapi":{"path":"\u002Fnapi\u002Fuser\u002Fwts","tokens":[{"literal":"\u002Fnapi\u002Fuser\u002Fwts"}]},"commonUserInfoNapi":{"path":"\u002Fnapi\u002Fuser","tokens":[{"literal":"\u002Fnapi\u002Fuser"}]},"commonUserGetRatingNapi":{"path":"\u002Fnapi\u002Fuser\u002Frating","tokens":[{"literal":"\u002Fnapi\u002Fuser\u002Frating"}]},"webUserProfileMovieRatingsNapi":{"path":"\u002Fnapi\u002FuserProfile\u002FmovieRatings\u002F:userId","tokens":[{"literal":"\u002Fnapi\u002FuserProfile\u002FmovieRatings\u002F"},{"key":"userId"}]},"webUserProfileTVRatingsNapi":{"path":"\u002Fnapi\u002FuserProfile\u002FtvRatings\u002F:userId","tokens":[{"literal":"\u002Fnapi\u002FuserProfile\u002FtvRatings\u002F"},{"key":"userId"}]},"webUserProfileWTSNapi":{"path":"\u002Fnapi\u002FuserProfile\u002Fwts\u002F:userId","tokens":[{"literal":"\u002Fnapi\u002FuserProfile\u002Fwts\u002F"},{"key":"userId"}]},"mediaHoundRecommendations":{"path":"https:\u002F\u002Fapi.mediahound.net\u002Fgraph\u002Frelate","tokens":[{"literal":"https:\u002F\u002Fapi.mediahound.net\u002Fgraph\u002Frelate"}]},"resetClient":{"path":"\u002Freset-client","tokens":[{"literal":"\u002Freset-client"}]},"tvSeasonCriticAddArticle":{"path":"https:\u002F\u002Fwww.rottentomatoes.com\u002Fcritics\u002Ftools\u002Ftv\u002F?reviewableId=:seasonId","tokens":[{"literal":"https:\u002F\u002Fwww.rottentomatoes.com\u002Fcritics\u002Ftools\u002Ftv\u002F?reviewableId="},{"key":"seasonId"}]},"userAccount":{"path":"\u002Fuser\u002Faccount","tokens":[{"literal":"\u002Fuser\u002Faccount"}]},"userAccountEmailPrefs":{"path":"https:\u002F\u002Foptout.services.fandango.com\u002Frottentomatoes","tokens":[{"literal":"https:\u002F\u002Foptout.services.fandango.com\u002Frottentomatoes"}]},"redirectorTheatersTopBoxOffice":{"path":"\u002Fbrowse\u002Fin-theaters","tokens":[{"literal":"\u002Fbrowse\u002Fin-theaters"}]},"webCritic":{"path":"\u002Fcritics\u002F:vanity\u002F:type(movies|tv)","tokens":[{"literal":"\u002Fcritics\u002F"},{"key":"vanity"},{"literal":"\u002F"},{"key":"type"}]},"webCriticLanding":{"path":"\u002Fcritics\u002F:vanity","tokens":[{"literal":"\u002Fcritics\u002F"},{"key":"vanity"}]},"webSearchResults":{"path":"\u002Fsearch\u002F","tokens":[{"literal":"\u002Fsearch\u002F"}]},"webShowtimes":{"path":"\u002Fshowtimes","tokens":[{"literal":"\u002Fshowtimes"}]},"webCriticSource":{"path":"\u002Fcritics\u002Fsource\u002F:publicationId","tokens":[{"literal":"\u002Fcritics\u002Fsource\u002F"},{"key":"publicationId"}]}}};
 root.RottenTomatoes.context || (root.RottenTomatoes.context = {});
-root.RottenTomatoes.context.layout = {"header":{"editorial":{"bestAndWorstNews":[{"ID":19933,"author":20,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2015\u002F06\u002F19171851\u002FJurassic-Park-Franchise-Recall.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fguide\u002Fjurassic-park-world-movies\u002F","promo_order":"","status":"publish","title":"\u003Cem\u003EJurassic Park\u003C\u002Fem\u003E Movies Ranked By Tomatometer","type":"article"},{"ID":77012,"author":20,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2018\u002F02\u002F14193805\u002FMarvel-Movies-Recall2.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fguide\u002Fall-marvel-cinematic-universe-movies-ranked\u002F","promo_order":"","status":"publish","title":"Marvel Movies Ranked Worst to Best by Tomatometer","type":"article"}],"guides":[{"ID":215991,"author":{"ID":7,"username":"RT Staff","name":"RT Staff","first_name":"RT","last_name":"Staff","nickname":"RT Staff","slug":"rt-staff","URL":"http:\u002F\u002Fwww.rottentomatoes.com","avatar":"https:\u002F\u002Fsecure.gravatar.com\u002Favatar\u002F1da0327e91516c500afa31e67da2395a?s=96","description":"Rotten Tomatoes every day.","registered":"2015-05-01T22:36:17+00:00","meta":{"links":{"self":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7","archives":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7\u002Fposts"}}},"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2020\u002F02\u002F08113554\u002Ftv-news-featured-image.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-hub\u002Ftv-news-2022\u002F","status":"publish","title":"TV and Streaming News","type":"rt-hub"},{"ID":131492,"author":{"ID":7,"username":"RT Staff","name":"RT Staff","first_name":"RT","last_name":"Staff","nickname":"RT Staff","slug":"rt-staff","URL":"http:\u002F\u002Fwww.rottentomatoes.com","avatar":"https:\u002F\u002Fsecure.gravatar.com\u002Favatar\u002F1da0327e91516c500afa31e67da2395a?s=96","description":"Rotten Tomatoes every day.","registered":"2015-05-01T22:36:17+00:00","meta":{"links":{"self":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7","archives":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7\u002Fposts"}}},"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2022\u002F07\u002F19170611\u002Fblack-adam-600x314-1.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-hub\u002Frt-comic-con-ketchup\u002F","status":"publish","title":"RT Comic-Con Ketchup","type":"rt-hub"}],"newsItems":[{"ID":210311,"author":814,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2022\u002F03\u002F14105125\u002FTheUmbrellaAcademy_Season3_Episode1_600x314.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Farticle\u002Frenewed-and-cancelled-tv-shows-2022\u002F","promo_order":"","status":"publish","title":"Renewed and Cancelled TV Shows 2022","type":"article"},{"ID":210321,"author":814,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2022\u002F08\u002F25085228\u002Fhellraiser-key-art600.png"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Farticle\u002Ftv-premiere-dates-2022\u002F","promo_order":"","status":"publish","title":"TV Premiere Dates 2022","type":"article"}]},"trendingTarsSlug":"rt-nav-trending","trending":[{"header":"House of the Dragon","url":"https:\u002F\u002Fwww.rottentomatoes.com\u002Ftv\u002Fhouse_of_the_dragon"},{"header":"HBO Series Ranked","url":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fguide\u002Fbest-hbo-series-of-all-time-ranked\u002F"},{"header":"Dragon Ball Super: Super Hero","url":"https:\u002F\u002Fwww.rottentomatoes.com\u002Fm\u002Fdragon_ball_super_super_hero"},{"header":"DC Animated Movies In Order","url":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fguide\u002Fdc-animated-movies-in-order\u002F"}],"certifiedMedia":{"certifiedFreshTvSeason":{"header":null,"media":{"url":"\u002Ftv\u002Fbad_sisters\u002Fs01","name":"Bad Sisters: Season 1","score":100,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002F3q0KCru4Ral-RqOjt7FI2W5LT8Y=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002FSidhAFhkDa_aWv9fwhF_F9nZzRc=\u002Fems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vMTMwNmVmYjgtM2Q4NC00YmNkLTg4MzAtYmFkZDliMWMzOTFhLnBuZw=="},"tarsSlug":"rt-nav-list-cf-picks"},"certifiedFreshMovieInTheater":{"header":null,"media":{"url":"\u002Fm\u002Fwhat_josiah_saw","name":"What Josiah Saw","score":90,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002FBe5DWWsuQIV0F9hzOCKKY5c8tvI=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002FPHAUrjfpIvdQbLb1m_vj_5DXsXQ=\u002Fems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzM4ZDdiNjk2LWYyNzAtNDU1Mi1hOTcyLTI3N2I1YmYwZjYwNS5qcGc="}},"certifiedFreshMovieInTheater4":{"header":null,"media":{"url":"\u002Fm\u002Fthe_territory_2022","name":"The Territory","score":95,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002Fu3akm640Hui3jbVRN3pu_tSAcso=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002FIkSPxOsKP2uYW3xwtgmOQc0Yk0k=\u002Fems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2JiMWFjNGU0LTBjZmMtNDUxYi1hZWE4LTgwNzcyMWZkYzY2NS5qcGc="}},"certifiedFreshMovieAtHome":{"header":null,"media":{"url":"\u002Fm\u002Fpotato_dreams_of_america","name":"Potato Dreams of America","score":90,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002Fx2_QqjyU6DaZAVCLWMXFP0OivOo=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002F92s_V6iUpdY1vY3QZiEPFnblK5k=\u002Fems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2IxNzQzYmI1LWJiNTUtNDMyMC1hOGY2LWVmODk0NDA5NDYxYi5qcGc="}},"tarsSlug":"rt-nav-list-cf-picks"},"tvLists":{"newTvTonight":{"tarsSlug":"rt-hp-text-list-new-tv-this-week","title":"New TV Tonight","shows":[{"title":"House of the Dragon: Season 1","tomatometer":{"tomatometer":83,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fhouse_of_the_dragon\u002Fs01"},{"title":"Kevin Can F**k Himself: Season 2","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fkevin_can_f_himself\u002Fs02"},{"title":"See: Season 3","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fsee\u002Fs03"},{"title":"Welcome to Wrexham: Season 1","tomatometer":{"tomatometer":91,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fwelcome_to_wrexham\u002Fs01"},{"title":"Mike: Season 1","tomatometer":{"tomatometer":54,"state":"rotten","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fmike\u002Fs01"},{"title":"Mo: Season 1","tomatometer":{"tomatometer":100,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fmo\u002Fs01"},{"title":"Partner Track: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fpartner_track\u002Fs01"},{"title":"Little Demon: Season 1","tomatometer":{"tomatometer":83,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Flittle_demon\u002Fs01"},{"title":"Star Trek: Lower Decks: Season 3","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fstar_trek_lower_decks\u002Fs03"},{"title":"The End Is Nye: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fthe_end_is_nye\u002Fs01"}]},"mostPopularTvOnRt":{"tarsSlug":"rt-hp-text-list-most-popular-tv-on-rt","title":"Most Popular TV on RT","shows":[{"title":"House of the Dragon: Season 1","tomatometer":{"tomatometer":83,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fhouse_of_the_dragon\u002Fs01"},{"title":"She-Hulk: Attorney at Law: Season 1","tomatometer":{"tomatometer":88,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fshe_hulk_attorney_at_law\u002Fs01"},{"title":"The Lord of the Rings: The Rings of Power: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fthe_lord_of_the_rings_the_rings_of_power\u002Fs01"},{"title":"The Sandman: Season 1","tomatometer":{"tomatometer":86,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fthe_sandman\u002Fs01"},{"title":"Echoes: Season 1","tomatometer":{"tomatometer":29,"state":"rotten","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fechoes\u002Fs01"},{"title":"Only Murders in the Building: Season 2","tomatometer":{"tomatometer":98,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fonly_murders_in_the_building\u002Fs02"},{"title":"Better Call Saul: Season 6","tomatometer":{"tomatometer":99,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fbetter_call_saul\u002Fs06"},{"title":"Mo: Season 1","tomatometer":{"tomatometer":100,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fmo\u002Fs01"},{"title":"The Bear: Season 1","tomatometer":{"tomatometer":100,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fthe_bear\u002Fs01"}]}},"legacyItems":{"tarsSlug":"rt-nav-list-tv-episodic-reviews","tv":{"mediaLists":[{},{},{},{"title":"Episodic Reviews","shows":[{"link":"\u002Ftv\u002Fbetter_call_saul\u002Fs06","showTitle":"Better Call Saul: Season 6"},{"link":"\u002Ftv\u002Freservation_dogs\u002Fs02","showTitle":"Reservation Dogs: Season 2"},{"link":"\u002Ftv\u002Funcoupled\u002Fs01","showTitle":"Uncoupled: Season 1"},{"link":"\u002Ftv\u002Fonly_murders_in_the_building\u002Fs02","showTitle":"Only Murders in the Building: Season 2"},{"link":"\u002Ftv\u002Fthe_old_man\u002Fs01","showTitle":"The Old Man: Season 1"},{"link":"\u002Ftv\u002Fwestworld\u002Fs04","showTitle":"Westworld: Season 4"},{"link":"\u002Ftv\u002Fthe_bear\u002Fs01","showTitle":"The Bear: Season 1"}]}]}}},"links":{"moviesInTheaters":{"certifiedFresh":"\u002Fbrowse\u002Fcf-in-theaters","comingSoon":"\u002Fbrowse\u002Fupcoming","openingThisWeek":"\u002Fbrowse\u002Fopening","title":"\u002Fbrowse\u002Fin-theaters","topBoxOffice":"\u002Fbrowse\u002Fin-theaters"},"onDvdAndStreaming":{"all":"\u002Fbrowse\u002Fdvd-streaming-all","certifiedFresh":"\u002Fbrowse\u002Fcf-dvd-streaming-all","title":"\u002Fdvd","top":"\u002Fbrowse\u002Ftop-dvd-streaming"},"moreMovies":{"topMovies":"\u002Ftop","trailers":"\u002Ftrailers"},"tvTonight":"\u002Fbrowse\u002Ftv-list-1","tvPopular":"\u002Fbrowse\u002Ftv-list-2","moreTv":{"topTv":"https:\u002F\u002Fwww.rottentomatoes.com\u002Ftop-tv","certifiedFresh":"\u002Fbrowse\u002Ftv-list-3"},"editorial":{"allTimeLists":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fall-time-lists\u002F","bingeGuide":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fbinge-guide\u002F","comicsOnTv":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fcomics-on-tv\u002F","countdown":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fcountdown\u002F","criticsConsensus":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fcritics-consensus\u002F","fiveFavoriteFilms":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Ffive-favorite-films\u002F","guidesHome":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-hubs\u002F","home":"https:\u002F\u002Feditorial.rottentomatoes.com\u002F","news":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fnews\u002F","nowStreaming":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fnow-streaming\u002F","parentalGuidance":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fparental-guidance\u002F","podcast":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Farticle\u002Frotten-tomatoes-is-wrong-a-podcast-from-rotten-tomatoes\u002F","redCarpetRoundup":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fred-carpet-roundup\u002F","scorecards":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fmovie-tv-scorecards\u002F","subCult":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fsub-cult\u002F","theZeros":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fthe-zeros\u002F","totalRecall":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Ftotal-recall\u002F","twentyFourFrames":"https:\u002F\u002Feditorial.rottentomatoes.com\u002F24-frames\u002F","videoInterviews":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fvideo-interviews\u002F","weekendBoxOffice":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fweekend-box-office\u002F","weeklyKetchup":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fweekly-ketchup\u002F","whatToWatch":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwhat-to-watch\u002F"}}};
+root.RottenTomatoes.context.layout = {"header":{"editorial":{"bestAndWorstNews":[{"ID":19933,"author":20,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2015\u002F06\u002F19171851\u002FJurassic-Park-Franchise-Recall.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fguide\u002Fjurassic-park-world-movies\u002F","promo_order":"","status":"publish","title":"\u003Cem\u003EJurassic Park\u003C\u002Fem\u003E Movies Ranked By Tomatometer","type":"article"},{"ID":77012,"author":20,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2018\u002F02\u002F14193805\u002FMarvel-Movies-Recall2.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fguide\u002Fall-marvel-cinematic-universe-movies-ranked\u002F","promo_order":"","status":"publish","title":"Marvel Movies Ranked Worst to Best by Tomatometer","type":"article"}],"guides":[{"ID":175594,"author":{"ID":7,"username":"RT Staff","name":"RT Staff","first_name":"RT","last_name":"Staff","nickname":"RT Staff","slug":"rt-staff","URL":"http:\u002F\u002Fwww.rottentomatoes.com","avatar":"https:\u002F\u002Fsecure.gravatar.com\u002Favatar\u002F1da0327e91516c500afa31e67da2395a?s=96","description":"Rotten Tomatoes every day.","registered":"2015-05-01T22:36:17+00:00","meta":{"links":{"self":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7","archives":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7\u002Fposts"}}},"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2022\u002F08\u002F29202814\u002FRT_BINGE_CENTRAL_SPONSORED_FX_600X314.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-hub\u002Fbinge-central\u002F","status":"publish","title":"Binge Central","type":"rt-hub"},{"ID":215991,"author":{"ID":7,"username":"RT Staff","name":"RT Staff","first_name":"RT","last_name":"Staff","nickname":"RT Staff","slug":"rt-staff","URL":"http:\u002F\u002Fwww.rottentomatoes.com","avatar":"https:\u002F\u002Fsecure.gravatar.com\u002Favatar\u002F1da0327e91516c500afa31e67da2395a?s=96","description":"Rotten Tomatoes every day.","registered":"2015-05-01T22:36:17+00:00","meta":{"links":{"self":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7","archives":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwp-json\u002Fusers\u002F7\u002Fposts"}}},"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2020\u002F02\u002F08113554\u002Ftv-news-featured-image.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-hub\u002Ftv-news-2022\u002F","status":"publish","title":"TV and Streaming News","type":"rt-hub"}],"newsItems":[{"ID":224307,"author":825,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2022\u002F08\u002F31085534\u002Flotr-trop-s1-prince-durin-600x314-1.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Farticle\u002Fthe-lord-of-the-rings-the-rings-of-power-season-1-first-reviews\u002F","promo_order":"","status":"publish","title":"\u003Cem\u003EThe Lord of the Rings: The Rings of Power\u003C\u002Fem\u003E First Reviews: &#8216;Bold,&#8217; &#8216;Ambitious,&#8217; &#8216;Gorgeous,&#8217; &#8216;Full of Grandeur,&#8217; Critics Say","type":"article"},{"ID":223153,"author":825,"featured_image":{"source":"https:\u002F\u002Fprd-rteditorial.s3.us-west-2.amazonaws.com\u002Fwp-content\u002Fuploads\u002F2022\u002F08\u002F30093840\u002FCK5_key-art-600x314-1.jpg"},"link":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Farticle\u002Fnew-on-netflix-in-september-2022\u002F","promo_order":"","status":"publish","title":"New on Netflix in September 2022","type":"article"}]},"trendingTarsSlug":"rt-nav-trending","trending":[{"header":"The Lord of the Rings: The Rings of Power","url":"https:\u002F\u002Fwww.rottentomatoes.com\u002Ftv\u002Fthe_lord_of_the_rings_the_rings_of_power"},{"header":"Three Thousand Years of Longing","url":"https:\u002F\u002Fwww.rottentomatoes.com\u002Fm\u002Fthree_thousand_years_of_longing"},{"header":"Nope","url":"https:\u002F\u002Fwww.rottentomatoes.com\u002Fm\u002Fnope"}],"certifiedMedia":{"certifiedFreshTvSeason":{"header":null,"media":{"url":"\u002Ftv\u002Fthe_patient","name":"The Patient","score":85,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002Fvo3cO0B8di3AYVLmrPtnk1x8ebM=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002Ffao_NMcdUkXKqWJXyEH6HewIi0s=\u002Fems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvMWQ0NDc5Y2MtZmQ1OC00MDljLWE1MmQtZGE3M2MyYzgzNGRjLmpwZw=="},"tarsSlug":"rt-nav-list-cf-picks"},"certifiedFreshMovieInTheater":{"header":null,"media":{"url":"\u002Fm\u002Fbreaking","name":"Breaking","score":80,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002FTvPhMlSBxj98UrXJgyejs3GxsqY=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002Fx-o8ch9mBn7nopEbds00Kn24ZxE=\u002Fems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2QzNGM0ZmYxLWEwZjctNDgyMy1iMjU4LTVkMTMwZjJiOTQ0Mi5qcGc="}},"certifiedFreshMovieInTheater4":{"header":null,"media":{"url":"\u002Fm\u002Fthe_territory_2022","name":"The Territory","score":96,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002Fu3akm640Hui3jbVRN3pu_tSAcso=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002FIkSPxOsKP2uYW3xwtgmOQc0Yk0k=\u002Fems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2JiMWFjNGU0LTBjZmMtNDUxYi1hZWE4LTgwNzcyMWZkYzY2NS5qcGc="}},"certifiedFreshMovieAtHome":{"header":null,"media":{"url":"\u002Fm\u002Fpotato_dreams_of_america","name":"Potato Dreams of America","score":90,"posterImg":"https:\u002F\u002Fresizing.flixster.com\u002Fx2_QqjyU6DaZAVCLWMXFP0OivOo=\u002Ffit-in\u002F180x240\u002Fv2\u002Fhttps:\u002F\u002Fresizing.flixster.com\u002F92s_V6iUpdY1vY3QZiEPFnblK5k=\u002Fems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2IxNzQzYmI1LWJiNTUtNDMyMC1hOGY2LWVmODk0NDA5NDYxYi5qcGc="}},"tarsSlug":"rt-nav-list-cf-picks"},"tvLists":{"newTvTonight":{"tarsSlug":"rt-hp-text-list-new-tv-this-week","title":"New TV Tonight","shows":[{"title":"The Lord of the Rings: The Rings of Power: Season 1","tomatometer":{"tomatometer":83,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fthe_lord_of_the_rings_the_rings_of_power\u002Fs01"},{"title":"The Patient: Season 1","tomatometer":{"tomatometer":85,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fthe_patient\u002Fs01"},{"title":"DC's Stargirl: Season 3","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fstargirl\u002Fs03"},{"title":"Fakes: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Ffakes\u002Fs01"},{"title":"Life by Ella: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Flife_by_ella\u002Fs01"},{"title":"The Secrets She Keeps: Season 2","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fthe_secrets_she_keeps\u002Fs02"},{"title":"Keep This Between Us: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fkeep_this_between_us\u002Fs01"},{"title":"The Boleyns: A Scandalous Family: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fthe_boleyns_a_scandalous_family\u002Fs01"},{"title":"Pantheon: Season 1","tomatometer":{"tomatometer":null,"state":"","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fpantheon\u002Fs01"}]},"mostPopularTvOnRt":{"tarsSlug":"rt-hp-text-list-most-popular-tv-on-rt","title":"Most Popular TV on RT","shows":[{"title":"The Patient: Season 1","tomatometer":{"tomatometer":85,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fthe_patient\u002Fs01"},{"title":"House of the Dragon: Season 1","tomatometer":{"tomatometer":83,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fhouse_of_the_dragon\u002Fs01"},{"title":"The Lord of the Rings: The Rings of Power: Season 1","tomatometer":{"tomatometer":81,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fthe_lord_of_the_rings_the_rings_of_power\u002Fs01"},{"title":"She-Hulk: Attorney at Law: Season 1","tomatometer":{"tomatometer":88,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fshe_hulk_attorney_at_law\u002Fs01"},{"title":"Mo: Season 1","tomatometer":{"tomatometer":100,"state":"fresh","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fmo\u002Fs01"},{"title":"Echoes: Season 1","tomatometer":{"tomatometer":26,"state":"rotten","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fechoes\u002Fs01"},{"title":"The Sandman: Season 1","tomatometer":{"tomatometer":87,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fthe_sandman\u002Fs01"},{"title":"Partner Track: Season 1","tomatometer":{"tomatometer":56,"state":"rotten","certifiedFresh":false},"tvPageUrl":"\u002Ftv\u002Fpartner_track\u002Fs01"},{"title":"The Bear: Season 1","tomatometer":{"tomatometer":100,"state":"certified_fresh","certifiedFresh":true},"tvPageUrl":"\u002Ftv\u002Fthe_bear\u002Fs01"}]}},"legacyItems":{"tarsSlug":"rt-nav-list-tv-episodic-reviews","tv":{"mediaLists":[{},{},{},{"title":"Episodic Reviews","shows":[{"link":"\u002Ftv\u002Fbetter_call_saul\u002Fs06","showTitle":"Better Call Saul: Season 6"},{"link":"\u002Ftv\u002Freservation_dogs\u002Fs02","showTitle":"Reservation Dogs: Season 2"},{"link":"\u002Ftv\u002Funcoupled\u002Fs01","showTitle":"Uncoupled: Season 1"},{"link":"\u002Ftv\u002Fonly_murders_in_the_building\u002Fs02","showTitle":"Only Murders in the Building: Season 2"},{"link":"\u002Ftv\u002Fthe_old_man\u002Fs01","showTitle":"The Old Man: Season 1"},{"link":"\u002Ftv\u002Fwestworld\u002Fs04","showTitle":"Westworld: Season 4"},{"link":"\u002Ftv\u002Fthe_bear\u002Fs01","showTitle":"The Bear: Season 1"}]}]}}},"links":{"moviesInTheaters":{"certifiedFresh":"\u002Fbrowse\u002Fcf-in-theaters","comingSoon":"\u002Fbrowse\u002Fupcoming","openingThisWeek":"\u002Fbrowse\u002Fopening","title":"\u002Fbrowse\u002Fin-theaters","topBoxOffice":"\u002Fbrowse\u002Fin-theaters"},"onDvdAndStreaming":{"all":"\u002Fbrowse\u002Fdvd-streaming-all","certifiedFresh":"\u002Fbrowse\u002Fcf-dvd-streaming-all","title":"\u002Fdvd","top":"\u002Fbrowse\u002Ftop-dvd-streaming"},"moreMovies":{"topMovies":"\u002Ftop","trailers":"\u002Ftrailers"},"tvTonight":"\u002Fbrowse\u002Ftv-list-1","tvPopular":"\u002Fbrowse\u002Ftv-list-2","moreTv":{"topTv":"https:\u002F\u002Fwww.rottentomatoes.com\u002Ftop-tv","certifiedFresh":"\u002Fbrowse\u002Ftv-list-3"},"editorial":{"allTimeLists":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fall-time-lists\u002F","bingeGuide":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fbinge-guide\u002F","comicsOnTv":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fcomics-on-tv\u002F","countdown":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fcountdown\u002F","criticsConsensus":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fcritics-consensus\u002F","fiveFavoriteFilms":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Ffive-favorite-films\u002F","guidesHome":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Frt-hubs\u002F","home":"https:\u002F\u002Feditorial.rottentomatoes.com\u002F","news":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fnews\u002F","nowStreaming":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fnow-streaming\u002F","parentalGuidance":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fparental-guidance\u002F","podcast":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Farticle\u002Frotten-tomatoes-is-wrong-a-podcast-from-rotten-tomatoes\u002F","redCarpetRoundup":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fred-carpet-roundup\u002F","scorecards":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fmovie-tv-scorecards\u002F","subCult":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fsub-cult\u002F","theZeros":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fthe-zeros\u002F","totalRecall":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Ftotal-recall\u002F","twentyFourFrames":"https:\u002F\u002Feditorial.rottentomatoes.com\u002F24-frames\u002F","videoInterviews":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fvideo-interviews\u002F","weekendBoxOffice":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fweekend-box-office\u002F","weeklyKetchup":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fweekly-ketchup\u002F","whatToWatch":"https:\u002F\u002Feditorial.rottentomatoes.com\u002Fwhat-to-watch\u002F"}}};
 root.RottenTomatoes.thirdParty = {"chartBeat":{"auth":"64558","domain":"rottentomatoes.com"},"facebook":{"appId":"326803741017","version":"v6.0","appName":"flixstertomatoes"},"mpx":{"accountPid":"NGweTC","playerPid":"y__7B0iQTi4P","playerPidPDK6":"pdk6_y__7B0iQTi4P","accountId":"2474312077"},"algoliaSearch":{"aId":"79FRDP12PN","sId":"175588f6e5f8319b27702e4cc4013561"},"cognito":{"upId":"us-west-2_4L0ZX4b1U","clientId":"7pu48v8i2n25t4vhes0edck31c"}};
 root.RottenTomatoes.serviceWorker = {"isServiceWokerOn":true};
 root.__RT__ || (root.__RT__ = {});
-root.__RT__.featureFlags = {"adsCarouselActiveName":"rt-sponsored-carousel-list-hulu","adsCarouselHP":true,"adsCarouselOP":true,"adsHub":true,"adsVideoSpotlightHP":false,"amcVas":false,"disableFeatureDetection":true,"disableReviewSubmission":false,"legacyBridge":true,"mopUseEMSCriticService":false,"removeThirdPartyTags":true,"scoreIntroCard":false,"showVerification":false,"useCognito":true,"useCognitoAccountUpdate":false,"useFacebookLogin":true,"useOneTrust":false,"videosPagesModels":true};
-root.RottenTomatoes.dtmData = {"webVersion":"node","clicktale":true,"rtVersion":3,"loggedInStatus":"","customerId":"","pageName":"rt | movies | overview | E.T. the Extra-Terrestrial","titleType":"Movie","emsID":"9ac889c9-a513-3596-a647-ab4f4554112f","lifeCycleWindow":"TODO_MISSING","titleGenre":"Kids & family|Sci-fi|Adventure","titleId":"9ac889c9-a513-3596-a647-ab4f4554112f","titleName":"E.T. the Extra-Terrestrial","whereToWatch":[{"vudu":undefined,"peacock":undefined,"netflix":undefined,"hulu":undefined,"amazon-prime-video-us":undefined,"disney-plus-us":undefined,"hbo-max":undefined,"paramount-plus-us":undefined,"apple-tv-plus-us":undefined,"itunes":undefined,"hbo-go":undefined}]};
+root.__RT__.featureFlags = {"adsCarouselActiveName":"rt-sponsored-carousel-list-hulu","adsCarouselHP":false,"adsCarouselOP":false,"adsHub":true,"adsMockDLP":false,"adsVideoSpotlightHP":false,"amcVas":false,"authVerboseLogs":false,"disableFeatureDetection":true,"disableReviewSubmission":false,"legacyBridge":true,"mopUseEMSCriticService":false,"removeThirdPartyTags":true,"scoreIntroCard":false,"showVerification":false,"useCognito":true,"useCognitoAccountUpdate":false,"useFacebookLogin":true,"useOneTrust":false,"videosPagesModels":true};
+root.RottenTomatoes.dtmData = {"webVersion":"node","clicktale":true,"rtVersion":3,"loggedInStatus":"","customerId":"","pageName":"rt | movies | overview | E.T. the Extra-Terrestrial","titleType":"Movie","emsID":"9ac889c9-a513-3596-a647-ab4f4554112f","lifeCycleWindow":"TODO_MISSING","titleGenre":"Kids & family|Sci-fi|Adventure","titleId":"9ac889c9-a513-3596-a647-ab4f4554112f","titleName":"E.T. the Extra-Terrestrial","whereToWatch":[{"vudu":undefined,"peacock":undefined,"netflix":undefined,"hulu":undefined,"amazon-prime-video-us":undefined,"disney-plus-us":undefined,"hbo-max":undefined,"paramount-plus-us":undefined,"apple-tv-plus-us":undefined,"showtime":undefined,"itunes":undefined}]};
 root.RottenTomatoes.context.useCognito = true;
 root.RottenTomatoes.context.useFacebookLogin = true;
 root.RottenTomatoes.context.disableFeatureDetection = true;
@@ -6230,7 +6210,7 @@ root.RottenTomatoes.context.imagesJson = [{"id":0,"aspectRatio":"ASPECT_RATIO_3_
 
         <script src="/assets/pizza-pie/javascripts/bundles/client-side-templates.3971b18b622.js"></script>
 
-        <script src="/assets/pizza-pie/javascripts/bundles/global.28441cf8d88.js"></script>
+        <script src="/assets/pizza-pie/javascripts/bundles/global.ceea0c524f2.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
         <script src="/assets/pizza-pie/javascripts/bundles/search-algolia.35e6f7d915b.js"></script>
@@ -6241,7 +6221,7 @@ root.RottenTomatoes.context.imagesJson = [{"id":0,"aspectRatio":"ASPECT_RATIO_3_
     <script src="/assets/pizza-pie/javascripts/bundles/profanity-filter.4f154f92bd7.js"></script>
 
 
-    <script src="/assets/pizza-pie/javascripts/bundles/movie-details.e92603ce97f.js"></script>
+    <script src="/assets/pizza-pie/javascripts/bundles/movie-details.f0c2fefd3a4.js"></script>
 
 
         
