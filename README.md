@@ -10,3 +10,4 @@ Project is on the analysis of gun data from the FBI NICS Firearm Background Chec
 ### Started my second course on ALX "Introduction to Data Wrangling" - 12th of August 2022.
 [Exercise 01: Data Wrangling Process](https://github.com/jjjeorgee/ALX-T/blob/main/Excercises/01/Data%20wrangling.ipynb) <br>
 [Exercise 02: Data Gathering indepth](https://github.com/jjjeorgee/ALX-T/blob/main/Excercises/02/Gathering%20Data.ipynb)
+### Started my second ALX project - 4th of September 2022
