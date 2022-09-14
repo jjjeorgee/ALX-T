@@ -15,4 +15,4 @@ Project is focused on wrangling data from the twitter API. The focus of this pro
 ### Finished my second ALX project - 10th of september 2022
 [Project 02: Wrangling and Analysis on WeRateDogs' Twitter Data.](https://nbviewer.ipython.org/github/jjjeorgee/ALX-T/blob/main/Project%2002%20-%20Data%20Wrangling/wrangle_act.ipynb#Cleaning%20and%20Trimming)
 ### Started my third course on ALX "Data Visualization" - 14th of September 2022
-[Exercise 01: Anscombe's Quartet]()
+[Exercise 01: Anscombe's Quartet](https://github.com/jjjeorgee/ALX-T/blob/main/Excercises/03/Anscombe's%20Quartet.ipynb)
