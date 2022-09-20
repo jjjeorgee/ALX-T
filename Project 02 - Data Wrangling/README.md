@@ -1,4 +1,4 @@
-## Data Wrangling Project
+## Wrangling and Analysis on WeRateDogs' Twitter Data.
 <img width="341" alt="Screenshot 2022-09-13 203858" src="https://user-images.githubusercontent.com/98137996/191382471-c0c6ddfa-80dd-4717-a68a-040e2f8d0026.png">
 
 A little bit of a background, the dataset from which the following insights were obtained is from the twitter account "WeRateDogs". This data consisted of three separate datasets which were eventually merged into one. 
