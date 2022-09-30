@@ -25,4 +25,4 @@ Of all the available stations, the one at Market Street at 10th Street seems to 
 
 - Frequency of rides based on time of day.
 - Frequency of rides based on day of week.
-- Most visited and least visited stations.
+- Trip duration depending on user type and gender.
