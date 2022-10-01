@@ -17,3 +17,5 @@ Project is focused on wrangling data from the twitter API. The focus of this pro
 ### Started my third course on ALX "Data Visualization" - 14th of September 2022
 [Exercise 01: Anscombe's Quartet](https://github.com/jjjeorgee/ALX-T/blob/main/Excercises/03/Anscombe's%20Quartet.ipynb)
 ### Started my third ALX project - 18th of September 2022
+Project is an analysis of the FordGo Bike system data. Mainly focused on data exploration using Univariate, Bivariate and Multivariate visualizations
+### Finished my third project
