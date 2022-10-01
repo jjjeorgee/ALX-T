@@ -13,10 +13,10 @@ Project is on the analysis of gun data from the FBI NICS Firearm Background Chec
 ### Started my second ALX project - 4th of September 2022
 Project is focused on wrangling data from the twitter API. The focus of this project was WeRateDogs' twitter page, which is a twitter page dedicated to rating dogs.
 ### Completed my second ALX project - 10th of september 2022
-[Project 02: Wrangling and Analysis on WeRateDogs' Twitter Data.](https://nbviewer.org/github/jjjeorgee/ALX-T/blob/c2fd28f02883cac6f9e3d5a6070ca6e465dad1fa/Project%2002%20-%20Data%20Wrangling/wrangle_act.ipynb)
+[Project 02: Wrangling and Analysis of WeRateDogs' Twitter Data.](https://nbviewer.org/github/jjjeorgee/ALX-T/blob/c2fd28f02883cac6f9e3d5a6070ca6e465dad1fa/Project%2002%20-%20Data%20Wrangling/wrangle_act.ipynb)
 ### Started my third course on ALX "Data Visualization" - 14th of September 2022
 [Exercise 01: Anscombe's Quartet](https://github.com/jjjeorgee/ALX-T/blob/main/Excercises/03/Anscombe's%20Quartet.ipynb)
 ### Started my third ALX project - 18th of September 2022
-Project is an analysis of the FordGo Bike system data. Mainly focused on data exploration using Univariate, Bivariate and Multivariate visualizations
+Project is an analysis of the Ford GoBike system data. Mainly focused on data exploration using Univariate, Bivariate and Multivariate visualizations.
 ### Completed my third ALX project - 30th of September 2022
 [Ford GoBike System Data Analysis](https://nbviewer.ipython.org/github/jjjeorgee/ALX-T/blob/main/Project%2003%20-%20Data%20Visualization/Part_1_exploration.ipynb)
