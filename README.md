@@ -19,4 +19,4 @@ Project is focused on wrangling data from the twitter API. The focus of this pro
 ### Started my third ALX project - 18th of September 2022
 Project is an analysis of the FordGo Bike system data. Mainly focused on data exploration using Univariate, Bivariate and Multivariate visualizations
 ### Completed my third ALX project - 30th of September 2022
-[Ford GoBike System Data Analysis](https://nbviewer.org/github/jjjeorgee/ALX-T/blob/main/Project%2003%20-%20Data%20Visualization/Part_1_exploration.ipynb)
+[Ford GoBike System Data Analysis](https://nbviewer.ipython.org/github/jjjeorgee/ALX-T/blob/main/Project%2003%20-%20Data%20Visualization/Part_1_exploration.ipynb)
